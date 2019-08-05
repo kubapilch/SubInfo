@@ -53,20 +53,20 @@ You can also add optional arguments:
 - Table `words`
     - WORD : COUNT 
 - Table `users`
-    - USER : POST : COUNT
+    - USER : POST_COUNT : COMMENT_COUNT
 - Table `submissions`
     - TYPE : COUNT : SPOILER_COUNT
 - Table `sub_times`
     - HOUR : COUNT
 
 ## Stop words
-You have a list of stop words inside `stopwords.txt` that will be excluded from summary. Example of sucha a word is 'was', 'you', 'however' etc. You can add your own stop words by appending the txt file. **NOTE: Every word has to be in different line** 
+You have a list of stop words inside `stopwords.txt` that will be excluded from summary. Examples of such words are 'was', 'you', 'however' etc. You can add your own stop words by appending the txt file. **NOTE: Every word has to be in different line** 
 
 ## Example usage
 Running the script is pretty simple, all you need is a subreddit name. You can find exact name inside subreddit url, we will use `learnpython` subreddit.
-This is out subreddit url: `https://www.reddit.com/r/learnpython/`. You can see the exact name after `/r/` and it is `learnpython`.
+This is our subreddit url: `https://www.reddit.com/r/learnpython/`. You can see the exact name after `/r/` and it is `learnpython`.
 
-All you have to do is run `python subInfo.py -n learnpython -s` and downloading process will start. Dates my confuse you at first, but data is being downloaded in chunkes(500 submissions) and this means that this is a date of last downloaded submission and script is downloading next 500 since then.
+All you have to do is run `python subInfo.py -n learnpython -s` and downloading process will start. Dates may confuse you at first, but data is being downloaded in chunkes(500 submissions) and this means that this is a date of last downloaded submission and script is downloading next 500 since then.
 ![example](https://github.com/kubapilch/SubInfo/blob/master/examples/subInf.JPG)
 
-**It can take several dozen of minutes depending on your disc speed, internet connection and size of a subreddit.**
+**It can take several dozen of minutes depending on your hard drive speed, internet connection and size of a subreddit.**
