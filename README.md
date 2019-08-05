@@ -10,6 +10,7 @@ Currently the only way to install my script is downloading it from github, I wil
 ## Usage
 To run the script you have to pass this obligatory argument:
 - `-n`/`--name` - Name of a subreddit
+
 You can also add optional arguments:
 - `-s`/`--summary` - If you wnat to display summary of the subreddit info in terminal
 - `-f`/`--file` - If you want to get data from file instead of downloading it
