@@ -66,6 +66,6 @@ Running the script is pretty simple, all you need is a subreddit name. You can f
 This is out subreddit url: `https://www.reddit.com/r/learnpython/`. You can see the exact name after `/r/` and it is `learnpython`.
 
 All you have to do is run `python subInfo.py -n learnpython -s` and downloading process will start. Dates my confuse you at first, but data is being downloaded in chunkes(500 submissions) and this means that this is a date of last downloaded submission and script is downloading next 500 since then.
-[example](https://github.com/kubapilch/SubInfo/blob/master/examples/subInf.JPG)
+![example](https://github.com/kubapilch/SubInfo/blob/master/examples/subInf.JPG)
 
 **It can take several dozen of minutes depending on your disc speed, internet connection and size of a subreddit.**
