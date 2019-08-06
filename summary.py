@@ -91,6 +91,9 @@ class Summary():
     def unique_words(self):
         print(f'There is {len(self.words["words"])} unique words')
     
+    def unique_users(self):
+        print(f'\nThere is {len(self.users)} unique users')
+    
     def post_info(self):
         print(f'\nThere are {self.words["posts"]["number"]} posts and {self.words["posts"]["spoiler"]} are marked as spoilers')
 
@@ -110,6 +113,7 @@ class Summary():
         self.top_posters(number_users)
         self.top_submissions(number_users)
         self.top_commenters(number_users)
+        self.unique_users()
         self.top_words(number_words)
         self.total_number_of_words()
         self.unique_words()
