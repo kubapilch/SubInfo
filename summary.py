@@ -1,4 +1,5 @@
 import json
+import argparse
 
 class Summary():
 
@@ -109,7 +110,12 @@ class Summary():
         
         print(f'Sum of all sumbissions: {sum(activity.values())}')
 
-    def create_summary(self, number_words, number_users):
+    def create_summary(self, number_words, number_users, exclude_deleted_users):
+        
+        # Exclude deleted useres from ranking
+        if exclude_deleted_users:
+            del self.users['[deleted]']
+        
         self.top_posters(number_users)
         self.top_submissions(number_users)
         self.top_commenters(number_users)
@@ -121,10 +127,24 @@ class Summary():
         self.comment_info()
         self.activity_info()
 
+def parse_arguments():
+    parser = argparse.ArgumentParser()
+
+    parser.add_argument('-n', '--name', help='Name of a subreddit that you want to create summary for', required=True)
+    parser.add_argument('-w', '--words', help='Max top words that you want to show', default=20, type=int)
+    parser.add_argument('-u', '--users', help='Max top users that you want to show', default=10, type=int)
+    parser.add_argument('-d', '--deleted', help='Use this flag if you want to include deleted accounts ([deleted]) in rankings', default=True, action='store_false')
+
+    # Parse arguments
+    print('Parsing arguments..')
+    args = parser.parse_args()
+
+    return args.name, args.words, args.users, args.deleted
 
 if __name__ == '__main__':
-    with Summary('the100') as s :
-        s.create_summary(10, 10)
-        
+    name, max_words, max_users, exclude_deleted = parse_arguments()
+    
+    with Summary(name) as s:
+        s.create_summary(max_words, max_users, exclude_deleted)
     
 
