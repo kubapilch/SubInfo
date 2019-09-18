@@ -11,9 +11,7 @@ Currently the only way to install my script is downloading it from github, I wil
 To run the `subinfo.py` script to download data you have to pass this obligatory argument:
 - `-n`/`--name` - Name of a subreddit
 
-You can also add optional arguments:
-- `-s`/`--summary` - If you wnat to display summary of the subreddit info in terminal
-- `-f`/`--file` - If you want to get data from file instead of downloading it
+You can also add optional argument:
 - `-d`/`--database` - If you want to save data to sql database. **You have to pass name for a database after this flag(without extension)**
 
 
@@ -70,7 +68,7 @@ To run the `summary.py` script to create summary of previously downloaded data y
     - HOUR : COUNT
 
 ## Stop words
-You have a list of stop words inside `stopwords.txt` that will be excluded from summary. Examples of such words are 'was', 'you', 'however' etc. You can add your own stop words by appending the txt file. **NOTE: Every word has to be in different line** 
+You have a list of stop words inside `stopwords.txt` that will be excluded from summary. Examples of such words are 'was', 'you', 'however' etc. You can add your own stop words by appending the txt file. **NOTE: Every word has to be in a different line** 
 
 ## Example usage
 Running the script is pretty simple, all you need is a subreddit name. You can find exact name inside subreddit url, we will use `learnpython` subreddit.
