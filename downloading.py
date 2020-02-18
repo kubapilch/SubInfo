@@ -339,7 +339,3 @@ class SubredditStatistics():
             self.c.execute("INSERT INTO sub_times VALUES (:hour, 0)", {'hour': hour})
 
         self.conn.commit()
-
-if __name__ == "__main__":
-    with SubredditStatistics('the100', database=False) as s:
-        s.download_and_save_statistics()
